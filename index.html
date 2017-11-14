@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ABRIL BETANCES</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+  <link rel="icon" href="imagenes/favicon.ico" type="image/gif" sizes="16x16">
+</head>
+<body>
+<header id="header">
+  <div class="title">
+    <div><span class="typcn typcn-heart-outline icon heading"></span></div>
+    <div class="smallsep heading"></div>
+    <h1 class="heading"> ABRIL BETANCES</h1>
+    <h2 class="heading">Welcome to my design process</h2>
+    <a class="smoothscroll" href="#about">
+    <div class="mouse">
+      <div class="wheel"></div>
+    </div>
+    </a> </div>
+  <a class="smoothscroll" href="#about">
+  <div class="scroll-down"></div>
+  </a> </header>
+   
+  
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <h1>About</h1>
+      <div class="block"></div>
+      <p> My name is Abril Betances and I am a graphic design student at Altos de Chavon School of Design. Designing for me becomes more than just fun, it is a challenge that every day makes you a better person in many different aspects. So if you want to know what my creative process is, keep reading... </p>
+    </div>
+    <div class="row">
+      <div class="six columns">
+        <h3><span class="typcn typcn-device-desktop icon"></span>My Process</h3>
+        <p>The first thing I do when I have a project is to look for information about it, after I have the necessary information I look for the problem and the solution. And that's when it starts to get complicated. The difficult thing is to look for the solution, but everything depends on how you look.</p>
+      </div>
+      <div class="six columns">
+        <h3><span class="typcn typcn-pen icon"></span>My Approach</h3>
+        <p>I want to have an effective way to find a solution to the problem that is not boring, why should it be boring? If you are already looking to fix a problem, make it fun! life is too short to be boring. We are designers for some specific reason, some of us like the idea of ​​creating something new, others the challenge of finding the solution. All the reasons are valid, but in the end we are designers because it makes us happy what we do.</p>
+      </div>
+      <div class="row">
+        <div class="six columns">
+          <h3><span class="typcn typcn-cog-outline icon"></span>My Goal</h3>
+          <p>I want to see each project as a new way to have fun and do what I love, sometimes the problem is so big that sometimes we forget why we started.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="container">  
+  <form id="contact" action="" method="post">
+    <h3>Contact Me</h3>
+    <h4>Get reply with in 24 hours!</h4>
+    <fieldset>
+      <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Email Address" type="email" tabindex="2" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Phone Number" type="tel" tabindex="3" required>
+    </fieldset>
+    <fieldset>
+      <textarea placeholder="Type your Message Here...." tabindex="5" required></textarea>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>
+  </form>  
+</div>
+
+<footer>
+  <div class="container">
+    <div class="nine columns">
+      <p>This web page was created for educational purposes by Abril Betances in 2017. With a lot of love and patience.</p>
+    </div>
+    <div class="three columns"> <span class="typcn typcn-social-facebook-circular socialIcons"></span> <span class="typcn typcn-social-instagram-circular socialIcons"></span> <span class="typcn typcn-social-google-plus-circular socialIcons"></span> <span class="typcn typcn-social-linkedin-circular socialIcons"></span> </div>
+  </div>
+</footer>
+<script>
+
+function fade($ele) {
+    $ele.fadeIn(1000).delay(3000).fadeOut(1000, function() {
+        var $next = $(this).next('.quote');
+        fade($next.length > 0 ? $next : $(this).parent().children().first());
+   });
+}
+fade($('.quoteLoop > .quote').first());
+
+
+/*----------------------------------------------------*/
+/* Smooth Scrolling
+------------------------------------------------------ */
+
+jQuery(document).ready(function($) {
+
+   $('.smoothscroll').on('click',function (e) {
+      e.preventDefault();
+
+      var target = this.hash,
+      $target = $(target);
+
+      $('html, body').stop().animate({
+          'scrollTop': $target.offset().top
+      }, 800, 'swing', function () {
+          window.location.hash = target;
+      });
+  });
+  
+});
+
+
+TweenMax.staggerFrom(".heading", 0.8, {opacity: 0, y: 20, delay: 0.2}, 0.4);
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>
